@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iCoder - Heaven for programmers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .carousel-img {
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+    }
+
+
+    .navbar {
+      position: relative;
+      z-index: 1050;
+    }
+
+
+
+
+    footer {
+      background-color: #212529;
+      color: #ccc;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">iCoder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- login  Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login to iCoder</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Close</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signupModalLabel">Get an iCoder account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+             <div class="mb-3">
+              <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1">
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Create account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <video class="d-block w-100 carousel-video" autoplay loop muted playsinline src="/img/1.mp4"
+          style="height: 500px; object-fit: cover;"></video>
+      </div>
+      <div class="carousel-item">
+        <video class="d-block w-100 carousel-video" autoplay loop muted playsinline src="/img/2.mp4"
+          style="height: 500px; object-fit: cover;"></video>
+      </div>
+      <div class="carousel-item">
+        <video class="d-block w-100 carousel-video" autoplay loop muted playsinline src="/img/3.mp4"
+          style="height: 500px; object-fit: cover;"></video>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row mb-2 gx-3 d-flex align-items-stretch">
+      <div class="col-md-6 d-flex">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm w-100 d-flex">
+          <div class="col p-3 d-flex flex-column justify-content-between">
+            <div>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">AI & Machine Learning</strong>
+              <h3 class="mb-0">The Future of AI in Web Development</h3>
+              <div class="mb-1 text-body-secondary">July 4, 2025</div>
+              <p class="card-text">
+                AI is no longer a buzzword—it's changing the way we build websites. Developers are now using tools like
+                GitHub Copilot and ChatGPT to auto-generate code snippets...
+              </p>
+            </div>
+            <a href="#" class="stretched-link mt-2">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <video width="250" height="100%" style="object-fit: cover; display: block;" autoplay loop muted playsinline>
+              <source src="/img/4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm w-100 d-flex">
+          <div class="col p-3 d-flex flex-column justify-content-between">
+            <div>
+              <strong class="d-inline-block mb-2 text-success-emphasis">Cybersecurity</strong>
+              <h3 class="mb-0">Top 5 Cyber Threats in 2025</h3>
+              <div class="mb-1 text-body-secondary">July 3, 2025</div>
+              <p class="card-text">
+                As we move into a more connected world, cyber threats are becoming more sophisticated. In 2025, the top
+                risks include AI-powered phishing attacks, deepfake identity theft...
+              </p>
+            </div>
+            <a href="#" class="stretched-link mt-2">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <video width="250" height="100%" style="object-fit: cover; display: block;" autoplay loop muted playsinline>
+              <source src="/img/5.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-2 mt-4 gx-3 d-flex align-items-stretch">
+      <div class="col-md-6 d-flex">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm w-100 d-flex">
+          <div class="col p-3 d-flex flex-column justify-content-between">
+            <div>
+              <strong class="d-inline-block mb-2 text-warning-emphasis">Web3 & Blockchain</strong>
+              <h3 class="mb-0">The Rise of Web3 & Decentralized Internet</h3>
+              <div class="mb-1 text-body-secondary">July 4, 2025</div>
+              <p class="card-text">
+                Web3 is redefining how users interact with the internet. Powered by blockchain, smart contracts, and
+                decentralized apps (dApps), it's shifting control from centralized platforms...
+              </p>
+            </div>
+            <a href="#" class="stretched-link mt-2">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <video width="250" height="100%" style="object-fit: cover; display: block;" autoplay loop muted playsinline>
+              <source src="/img/6.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm w-100 d-flex">
+          <div class="col p-3 d-flex flex-column justify-content-between">
+            <div>
+              <strong class="d-inline-block mb-2 text-danger-emphasis">Quantum Computing</strong>
+              <h3 class="mb-0">How Quantum Computing is Reshaping Tech</h3>
+              <div class="mb-1 text-body-secondary">July 3, 2025</div>
+              <p class="card-text">
+                Quantum computers are set to outperform even the most powerful classical supercomputers. From drug
+                discovery to data encryption, the impact will be massive...
+              </p>
+            </div>
+            <a href="#" class="stretched-link mt-2">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <video width="250" height="100%" style="object-fit: cover; display: block;" autoplay loop muted playsinline>
+              <source src="/img/7.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container text-center">
+      <p class="mb-2">© 2025 iCoder. All rights reserved.</p>
+      <div>
+        <a href="/" class="me-3">Home</a>
+        <a href="/about.html" class="me-3">About</a>
+        <a href="/contact.html" class="me-3">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
